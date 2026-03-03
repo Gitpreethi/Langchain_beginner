@@ -1,212 +1,207 @@
-# Langchain_beginner
-***
-LangChain Practice Repository
+# LangChain Practice Repository
 
-This repository contains structured experiments and implementations using LangChain, covering chat models, LLM integrations, embeddings, and prompt engineering concepts.
+This repository contains structured experiments and implementations using **LangChain**, covering chat models, LLM integrations, embeddings, and prompt engineering concepts.
 
 The project is organised module-wise to separate concerns clearly: chat models, LLMs, embeddings, and prompt templates.
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
+```
 ChatModels/
 EmbeddingModels/
 LLMs/
 prompt/
-🔹 ChatModels/
+```
+
+---
+
+## 🔹 ChatModels/
 
 Contains implementations using LangChain's chat model interfaces.
 
-chat_demo.py
+### `chat_demo.py`
 
 Basic chat model integration demonstrating how to:
 
-Initialize a chat model
+* Initialize a chat model
+* Send user input
+* Receive structured responses
 
-Send user input
-
-Receive structured responses
-
-chat_demo_gemini.py
+### `chat_demo_gemini.py`
 
 Integration with Google Gemini through LangChain.
 Covers:
 
-API-based model usage
+* API-based model usage
+* Chat interaction flow
+* Response handling
 
-Chat interaction flow
+### `chathf_api.py`
 
-Response handling
-
-chathf_api.py
-
-Hugging Face hosted an API-based chat model usage.
+Hugging Face hosted API-based chat model usage.
 Includes:
 
-API authentication
+* API authentication
+* Remote inference
+* Response parsing
 
-Remote inference
-
-Response parsing
-
-chathf_local.py
+### `chathf_local.py`
 
 Local Hugging Face model integration.
 Demonstrates:
 
-Loading models locally
+* Loading models locally
+* Using `HuggingFacePipeline`
+* Running inference without external API calls
 
-Using HuggingFacePipeline
+---
 
-Running inference without external API calls
-
-🔹 EmbeddingModels/
+## 🔹 EmbeddingModels/
 
 Contains implementations for:
 
-Generating vector embeddings
-
-Understanding how embeddings are used in retrieval
-
-Testing embedding pipelines
+* Generating vector embeddings
+* Understanding how embeddings are used in retrieval
+* Testing embedding pipelines
 
 Focus:
 
-Text-to-vector transformation
+* Text-to-vector transformation
+* Foundation for RAG systems
 
-Foundation for RAG systems
+---
 
-🔹 LLMs/
-llm_demo.py
+## 🔹 LLMs/
+
+### `llm_demo.py`
 
 Demonstrates usage of standard LLM interfaces in LangChain.
 Includes:
 
-Model initialization
+* Model initialization
+* Prompt passing
+* Response generation
+* Difference between chat models and raw LLMs
 
-Prompt passing
+---
 
-Response generation
-
-Difference between chat models and raw LLMs
-
-🔹 prompt/
+## 🔹 prompt/
 
 Contains experiments related to prompt engineering and template management.
 
-chatbot.py
+### `chatbot.py`
 
 Basic chatbot implementation using:
 
-Prompt templates
+* Prompt templates
+* Model invocation
+* Structured chat interaction
 
-Model invocation
-
-Structured chat interaction
-
-chatprompt_template.py
+### `chatprompt_template.py`
 
 Demonstrates:
 
-ChatPromptTemplate
+* `ChatPromptTemplate`
+* Role-based message formatting
+* Dynamic variable injection
 
-Role-based message formatting
-
-Dynamic variable injection
-
-message_placeholder.py
+### `message_placeholder.py`
 
 Explores:
 
-MessagesPlaceholder
+* `MessagesPlaceholder`
+* Maintaining conversation history
+* Dynamic message insertion
 
-Maintaining conversation history
-
-Dynamic message insertion
-
-staticprompt.py
+### `staticprompt.py`
 
 Static prompt structure for:
 
-Fixed system + user templates
+* Fixed system + user templates
+* Controlled generation tasks (e.g., summarization)
 
-Controlled generation tasks (e.g., summarization)
-
-template_generate.py
+### `template_generate.py`
 
 General prompt template experimentation:
 
-Variable-based prompts
+* Variable-based prompts
+* Structured generation workflows
 
-Structured generation workflows
-
-chat_history.txt
+### `chat_history.txt`
 
 Stores conversation history for:
 
-Testing context memory
+* Testing context memory
+* Persistent interaction experiments
 
-Persistent interaction experiments
+---
 
-🧠 Concepts Covered
+## 🧠 Concepts Covered
 
-Chat Models vs LLMs
+* Chat Models vs LLMs
+* Prompt Templates
+* Role-based Messaging
+* Hugging Face Local & API Models
+* Google Gemini Integration
+* Embeddings
+* Conversation Memory
+* Model Invocation Patterns
+* Streamlit-based Interfaces (where applicable)
 
-Prompt Templates
+---
 
-Role-based Messaging
+## 🛠 Technologies Used
 
-Hugging Face Local & API Models
+* Python
+* LangChain
+* Hugging Face Transformers
+* Google Generative AI (Gemini)
+* Streamlit (for UI experiments)
+* PyTorch
 
-Google Gemini Integration
+---
 
-Embeddings
+## 🚀 How to Run
 
-Conversation Memory
+1. Create virtual environment:
 
-Model Invocation Patterns
+   ```
+   python -m venv venv
+   ```
 
-Streamlit-based Interfaces (where applicable)
+2. Activate:
 
-🛠 Technologies Used
+   ```
+   venv\Scripts\activate
+   ```
 
-Python
+3. Install dependencies:
 
-LangChain
+   ```
+   pip install -r requirements.txt
+   ```
 
-Hugging Face Transformers
+4. Run any module:
 
-Google Generative AI (Gemini)
+   ```
+   python filename.py
+   ```
 
-Streamlit (for UI experiments)
+   or
 
-PyTorch
+   ```
+   streamlit run filename.py
+   ```
 
-🚀 How to Run
+---
 
-Create virtual environment:
+## 🎯 Purpose of This Repository
 
-python -m venv venv
+* Structured experimentation with LangChain
+* Understanding model interfaces
+* Comparing API vs local model usage
+* Building a foundation for advanced systems like RAG and AI assistants
 
-Activate:
 
-venv\Scripts\activate
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run any module:
-
-python filename.py
-
-or
-
-streamlit run filename.py
-🎯 Purpose of This Repository
-
-Structured experimentation with LangChain
-
-Understanding model interfaces
-
-Comparing API vs local model usage
-
-Building foundation for advanced systems like RAG and AI assistants
